@@ -1,0 +1,23 @@
+{
+  "name": "wheel-of-time-security-practice",
+  "version": "1.0.0",
+  "description": "A Wheel of Time-themed web application to practice common web security vulnerabilities like SQL Injection, XSS, and CSRF.",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "server": "node main.js",
+    "dev": "concurrently \"npm run server\" \"npm start\""
+  },
+  "author": "bwt",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.20.1",
+    "concurrently": "^7.6.0",
+    "electron": "^26.0.0",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
+
