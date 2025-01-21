@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wheel of Time Security Practice</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll issues */
+        }
+        header {
+            background-color: #232526;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+        }
+        .exercise {
+            margin-bottom: 40px;
+        }
+        .exercise h2 {
+            color: #444;
+            margin-bottom: 10px;
+        }
+        textarea, input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box; /* Prevents overflow issues */
+        }
+        button {
+            background-color: #232526;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #3e4144;
+        }
+        a {
+            color: #232526;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Wheel of Time Security Practice</h1>
+        <p>Test common vulnerabilities in a Wheel of Time-themed application!</p>
+    </header>
+    <div class="container">
+        <div class="exercise">
+            <h2>1. SQL Injection</h2>
+            <form action="/login" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" placeholder="Enter username">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter password">
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <div class="exercise">
+            <h2>2. Cross-Site Scripting (XSS)</h2>
+            <form action="/xss" method="POST">
+                <label for="xssInput">Enter your text:</label>
+                <textarea id="xssInput" name="input" placeholder="Type here..."></textarea>
+                <button type="submit">Render</button>
+            </form>
+        </div>
+
+        <div class="exercise">
+            <h2>3. Cross-Site Request Forgery (CSRF)</h2>
+            <a href="/csrf">Simulate Forged Request</a>
+        </div>
+    </div>
+</body>
+</html>
